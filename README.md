@@ -1,5 +1,7 @@
 # ByteCraft Solutions
 
+[![Website](https://img.shields.io/badge/Website-ByteCraft%20Solutions-blue?style=for-the-badge )](https://luguzin.github.io/bytecraft-solutions/ )
+
 Página web institucional para uma startup fictícia de tecnologia focada em desenvolvimento web.
 
 ## 📋 Descrição
