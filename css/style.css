@@ -1,0 +1,476 @@
+/* 
+   ByteCraft Solutions - Stylesheet
+   Conceitos aplicados: CSS Externo, Cores RGB/RGBA/HSL, Background-color, Background-image,
+   Opacity, Seletores de classe, Propriedades de layout e tipografia
+*/
+
+/* ========== RESET E ESTILOS GLOBAIS ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== CABEÇALHO ========== */
+.header {
+    background-color: rgb(30, 58, 138);
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: rgb(100, 200, 255);
+}
+
+/* ========== SEÇÃO HERO ========== */
+.hero {
+    background: linear-gradient(135deg, rgb(30, 58, 138) 0%, rgb(70, 130, 180) 100%);
+    color: rgb(255, 255, 255);
+    padding: 80px 20px;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    text-align: left;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: rgb(255, 107, 53);
+    color: rgb(255, 255, 255);
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: rgb(230, 80, 30);
+    transform: translateY(-2px);
+}
+
+/* ========== SEÇÃO SOBRE ========== */
+.about {
+    padding: 80px 20px;
+    background-color: rgb(245, 247, 250);
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: rgb(220, 20, 60);
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: rgb(0, 102, 204);
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgb(51, 51, 51);
+    margin-bottom: 15px;
+}
+
+/* ========== SEÇÃO SERVIÇOS ========== */
+.services {
+    padding: 80px 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: rgb(0, 102, 204);
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgb(245, 247, 250);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid rgb(255, 107, 53);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: rgb(220, 20, 60);
+}
+
+.service-card p {
+    color: rgb(102, 102, 102);
+    line-height: 1.7;
+}
+
+/* ========== SEÇÃO EQUIPE ========== */
+.team {
+    padding: 80px 20px;
+    background-color: rgb(245, 247, 250);
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: rgb(220, 20, 60);
+    text-align: center;
+}
+
+.team-intro {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+    margin-bottom: 40px;
+}
+
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-table thead {
+    background-color: rgb(30, 58, 138);
+    color: rgb(255, 255, 255);
+}
+
+.team-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.team-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    font-size: 15px;
+}
+
+.team-table tbody tr:hover {
+    background-color: rgba(100, 200, 255, 0.1);
+}
+
+.team-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========== SEÇÃO COMPETÊNCIAS ========== */
+.skills {
+    padding: 80px 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: rgb(0, 102, 204);
+    text-align: center;
+}
+
+.skills h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(220, 20, 60);
+}
+
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.skills-list li {
+    background-color: rgb(245, 247, 250);
+    padding: 12px 20px;
+    border-radius: 5px;
+    border-left: 3px solid rgb(255, 107, 53);
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+}
+
+/* ========== SEÇÃO PORTFÓLIO ========== */
+.portfolio {
+    padding: 80px 20px;
+    background-color: rgb(245, 247, 250);
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: rgb(220, 20, 60);
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgb(0, 102, 204);
+}
+
+.portfolio-item p {
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+}
+
+/* ========== SEÇÃO CONTATO ========== */
+.contact {
+    padding: 80px 20px;
+    background-color: rgb(30, 58, 138);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact > .container > p:nth-of-type(1) {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.contact-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: rgb(100, 200, 255);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: rgb(150, 220, 255);
+    text-decoration: underline;
+}
+
+/* ========== RODAPÉ ========== */
+.footer {
+    background-color: rgb(20, 40, 100);
+    color: rgb(200, 200, 200);
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer strong {
+    color: rgb(255, 255, 255);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .team-table {
+        font-size: 14px;
+    }
+
+    .team-table th,
+    .team-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .services h2,
+    .about h2,
+    .team h2,
+    .skills h2,
+    .portfolio h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+}
